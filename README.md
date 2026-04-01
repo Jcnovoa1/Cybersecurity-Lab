@@ -28,17 +28,8 @@ Objetivo: Identificar la ejecución de herramientas sospechosas tras una intrusi
 
 Evento Clave: 4688 (A new process has been created).
 
-#	Proceso Detectado	         Descripción Técnica	                         Nivel de Riesgo
-1	cmd.exe	              Intérprete de comandos ejecutado tras el login.	          Medio
-2	powershell.exe       	Consola avanzada usada para post-explotación.	            Alto
-3	net.exe	              Utilizado para la gestión de usuarios y grupos.	          Alto
-4	whoami.exe	          Comando de reconocimiento de privilegios.	                Bajo
-5	tasklist.exe	        Enumeración de procesos activos en el servidor.	          Bajo
-6	ipconfig.exe	        Reconocimiento de la topología de red local.	            Bajo
-7	net user	            Intento de creación de cuentas de persistencia.	         Crítico
-8	SplunkForwarder.exe	  Verificación de integridad del agente SIEM.	             Sistema
-9	svchost.exe	          Monitoreo de servicios legítimos de Windows.	           Sistema
-10	SearchIndexer.exe	  Actividad estándar de indexación de archivos.	           Sistema
+<img width="906" height="341" alt="image" src="https://github.com/user-attachments/assets/e1563183-1185-4f85-9f2c-5d460d5dd55b" />
+
 
 📊 Habilidades Demostradas
 Análisis de Logs: Interpretación de Windows Event IDs (4624, 4625, 4688, 4720).
