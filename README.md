@@ -66,7 +66,12 @@ A continuación se detallan las capturas de pantalla que documentan el ciclo de 
 
 <img width="347" height="142" alt="image" src="https://github.com/user-attachments/assets/0672136a-11f6-4049-8c11-7db25708cf09" />
 
-Reconocimiento de Usuario: Ejecución de whoami detectada en el SIEM. ![Evidencia 5](img/splunk_whoami.png)
+Reconocimiento de Usuario: Ejecución de whoami detectada en el SIEM. 
+
+<img width="369" height="89" alt="image" src="https://github.com/user-attachments/assets/856f10f5-78c5-45ea-957a-607db052c44e" />
+
+<img width="1210" height="317" alt="image" src="https://github.com/user-attachments/assets/880e7518-9eae-410c-91d5-916144e9276e" />
+
 
 Enumeración de Red: Registro del comando ipconfig desde la IP atacante. ![Evidencia 6](img/splunk_ipconfig.png)
 
