@@ -91,9 +91,29 @@ A continuación se detallan las capturas de pantalla que documentan el ciclo de 
 
 <img width="1227" height="264" alt="image" src="https://github.com/user-attachments/assets/3db8d8d9-4e81-49bc-bb45-08b70f7b13fd" />
 
-10) Persistencia mediante PowerShell: Script de ejecución detectado vía 4688. ![Evidencia 9](img/splunk_ps_exec.png)
+9) Persistencia mediante PowerShell: Script de ejecución detectado vía 4688. Se detectó un intento de ejecución de scripts de PowerShell con políticas de ejecución omitidas. Mediante el monitoreo del EventCode 4688, se logró identificar el comando exacto, permitiendo diferenciar entre tareas administrativas legítimas y actividad sospechosa de post-explotación.
 
-11) Dashboard Final: Vista general de alertas críticas en el panel de Splunk. ![Evidencia 10](img/splunk_dashboard.png)
+<img width="472" height="88" alt="image" src="https://github.com/user-attachments/assets/ae5f2d2e-099e-46cd-abd0-15200ac15bd7" />
+
+<img width="1183" height="283" alt="image" src="https://github.com/user-attachments/assets/78fdf2e4-01a1-4287-83f8-56e918e4da65" />
+
+10) Dashboard Final: Vista general de alertas críticas en el panel de Splunk. Vista consolidada de la seguridad del servidor. El pico en el código 4688 indica una actividad inusual de ejecución de procesos, lo que dispararía una alerta inmediata para un analista de seguridad.
+
+<img width="1867" height="489" alt="image" src="https://github.com/user-attachments/assets/75136c81-3adf-4839-bc3d-9929f253cc9f" />
+
+4688: Creación de Procesos. Es el que registra cada vez que el atacante ejecuta un comando (ipconfig, whoami, net user, powershell). Al ser tan alto, indica una actividad intensa de ejecución de comandos en el servidor.
+
+7036: Cambio de estado en un servicio. Este registra cuando servicios de Windows se detienen o inician 
+
+4624: Inicio de sesión exitoso (Logon). Confirma que el atacante entró al sistema.
+
+4625: Falla de inicio de sesión. Es el rastro de los intentos de contraseña incorrecta previos a la entrada.
+
+4719: Cambio en la política de auditoría. Este es muy importante en seguridad; salta cuando alguien intenta modificar qué cosas se graban en los logs (a veces los atacantes intentan apagar la auditoría para no ser vistos).
+
+1014: Advertencia de DNS. Indica que el servidor intentó resolver un nombre de red y no pudo (común cuando el atacante intenta conectar el servidor a internet o a otra red).
+
+6, 55, 98, 34: Son eventos de sistema relacionados con drivers, kernel y el sistema de archivos (NTFS). No son necesariamente de "ataque", pero Splunk los captura porque son cambios en el estado del servidor.
 
 💡 Perfil del Desarrollador
 
