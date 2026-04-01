@@ -1,9 +1,11 @@
 # Cybersecurity-Lab
 
 🛡️ Laboratorio de Monitoreo y Detección de Amenazas (SIEM)
+
 Este repositorio documenta la implementación de un laboratorio de ciberseguridad enfocado en la detección de ataques de fuerza bruta y persistencia en entornos de Windows Server.
 
 🚀 Escenario Técnico
+
 Atacante: Kali Linux (Herramientas: rdesktop, xfreerdp).
 
 Víctima: Windows Server 2022 (Configuración de Hardening y Auditoría).
@@ -11,6 +13,7 @@ Víctima: Windows Server 2022 (Configuración de Hardening y Auditoría).
 SIEM: Splunk Enterprise (Ingesta de logs mediante Universal Forwarder).
 
 🛠️ Proyectos y Casos de Uso
+
 1. Detección de Ataque de Fuerza Bruta RDP
 Objetivo: Identificar intentos de acceso no autorizados desde una red externa.
 
@@ -32,6 +35,7 @@ Evento Clave: 4688 (A new process has been created).
 
 
 📊 Habilidades Demostradas
+
 Análisis de Logs: Interpretación de Windows Event IDs (4624, 4625, 4688, 4720).
 
 Gestión de SIEM: Creación de dashboards y queries complejas en SPL.
@@ -40,7 +44,8 @@ Hardening: Configuración de seguridad y políticas de auditoría en Windows Ser
 
 Troubleshooting: Resolución de conflictos de conectividad entre máquinas virtuales.
 
-📸 Evidencia del Laboratorio (Investigación de 10 Puntos)
+📸 Evidencia del Laboratorio 
+
 A continuación se detallan las capturas de pantalla que documentan el ciclo de vida del ataque y su detección:
 
 Escaneo de Red: Detección de puertos abiertos desde Kali. ![Evidencia 1](img/nmap_scan.png)
@@ -64,4 +69,5 @@ Persistencia mediante PowerShell: Script de ejecución detectado vía 4688. ![Ev
 Dashboard Final: Vista general de alertas críticas en el panel de Splunk. ![Evidencia 10](img/splunk_dashboard.png)
 
 💡 Perfil del Desarrollador
+
 Este laboratorio integra conocimientos de Backend Development con Ciberseguridad, enfocándose en la creación de aplicaciones e infraestructuras resilientes y monitoreables.
