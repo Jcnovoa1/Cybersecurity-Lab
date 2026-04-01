@@ -48,13 +48,23 @@ Troubleshooting: Resolución de conflictos de conectividad entre máquinas virtu
 
 A continuación se detallan las capturas de pantalla que documentan el ciclo de vida del ataque y su detección:
 
-Escaneo de Red: Detección de puertos abiertos desde Kali. ![Evidencia 1](img/nmap_scan.png)
+1) Escaneo de Red: Detección de puertos abiertos desde Kali. Identificación de servicios activos en la IP 192.168.56.10. Se confirma que el puerto 3389 (RDP) se encuentra abierto, permitiendo avanzar a la fase de explotación.
 
-Intento de Conexión RDP: Error de CredSSP/NLA inicial en la terminal. ![Evidencia 2](img/rdp_error.png)
+<img width="347" height="142" alt="image" src="https://github.com/user-attachments/assets/8800c672-a608-48cb-9803-94f0cd07c00e" />
 
-Hardening Bypass: Desactivación de NLA en Windows Server. ![Evidencia 3](img/nla_disable.png)
+2) Intento de Conexión RDP: Ejecución de un intento de inicio de sesión remoto desde el host atacante (Kali Linux). Al intentar la conexión RDP desde Kali, la terminal registra un fallo al inicializar NLA (Network Level Authentication). 
 
-Fuerza Bruta Exitosa: Log de Splunk con EventCode 4625 seguido de 4624. ![Evidencia 4](img/splunk_login.png)
+<img width="349" height="107" alt="image" src="https://github.com/user-attachments/assets/cd7e6265-d9fc-4ae0-827b-9a63a6616467" />
+
+3) Hardening Bypass: Desactivación de NLA en Windows Server.
+
+<img width="400" height="149" alt="image" src="https://github.com/user-attachments/assets/11a5f2cd-549a-41bf-b2e1-843af4f57115" />
+
+4) Fuerza Bruta Exitosa: Una vez desactivado el NLA en el servidor, se vuelve a ejecutar el comando de conexión desde Kali Linux. En esta ocasión, se permite al atacante visualizar la interfaz de inicio de sesión de Windows Server, facilitando intentos de fuerza bruta.
+
+img width="347" height="142" alt="image" src="https://github.com/user-attachments/assets/0672136a-11f6-4049-8c11-7db25708cf09" />
+
+<img width="478" height="323" alt="image" src="https://github.com/user-attachments/assets/2d6405db-7b60-4c90-92fd-46477d7efd7e" />
 
 Reconocimiento de Usuario: Ejecución de whoami detectada en el SIEM. ![Evidencia 5](img/splunk_whoami.png)
 
