@@ -85,7 +85,7 @@ A continuación se detallan las capturas de pantalla que documentan el ciclo de 
 
 <img width="1203" height="307" alt="image" src="https://github.com/user-attachments/assets/72e3b93e-979a-47f3-aeb9-d1fbf3a218c6" />
 
-8) Escalada de Privilegios: EventCode 4732 (Adición al grupo Administradores).
+8) Escalada de Privilegios: EventCode 4732 (Adición al grupo Administradores). Para obtener control total sobre el servidor, el atacante elevó los privilegios de la cuenta creada integrándola al grupo de Administradores. El SIEM registró esta acción crítica bajo el EventCode 4732 (A member was added to a security-enabled local group), permitiendo al equipo de seguridad detectar el intento de toma de control total del activo.
 
 <img width="275" height="73" alt="image" src="https://github.com/user-attachments/assets/6955eaa7-456a-4201-b029-2ce1f95cdc18" />
 
