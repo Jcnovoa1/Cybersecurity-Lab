@@ -66,22 +66,30 @@ A continuación se detallan las capturas de pantalla que documentan el ciclo de 
 
 <img width="347" height="142" alt="image" src="https://github.com/user-attachments/assets/0672136a-11f6-4049-8c11-7db25708cf09" />
 
-Reconocimiento de Usuario: Ejecución de whoami detectada en el SIEM. 
+5) Reconocimiento de Usuario: Ejecución de whoami detectada en el SIEM. Se detectó la ejecución del comando whoami desde una terminal con privilegios. El SIEM registró la creación del proceso, permitiendose identificar que el atacante está intentando verificar su nivel de acceso dentro del sistema comprometido.
 
 <img width="369" height="89" alt="image" src="https://github.com/user-attachments/assets/856f10f5-78c5-45ea-957a-607db052c44e" />
 
 <img width="1210" height="317" alt="image" src="https://github.com/user-attachments/assets/880e7518-9eae-410c-91d5-916144e9276e" />
 
 
-Enumeración de Red: Registro del comando ipconfig desde la IP atacante. ![Evidencia 6](img/splunk_ipconfig.png)
+6) Enumeración de Red: Tras obtener acceso, el atacante ejecutó ipconfig /all para mapear la infraestructura de red del servidor. Esta actividad de reconocimiento fue detectada por Splunk mediante el monitoreo de creación de procesos, permitiendo identificar el intento de descubrimiento de otros activos en el segmento de red.
 
-Creación de Backdoor: EventCode 4720 detallando el nuevo usuario "hacker". ![Evidencia 7](img/splunk_4720.png)
+<img width="372" height="256" alt="image" src="https://github.com/user-attachments/assets/1a56aada-dc62-4259-b85c-98242864cc1d" />
 
-Escalada de Privilegios: EventCode 4732 (Adición al grupo Administradores). ![Evidencia 8](img/splunk_4732.png)
+<img width="1310" height="311" alt="image" src="https://github.com/user-attachments/assets/49711163-d36a-4359-b461-1726d566bab8" />
 
-Persistencia mediante PowerShell: Script de ejecución detectado vía 4688. ![Evidencia 9](img/splunk_ps_exec.png)
+7) Creación de Backdoor: EventCode 4720 detallando el nuevo usuario "hacker". 
 
-Dashboard Final: Vista general de alertas críticas en el panel de Splunk. ![Evidencia 10](img/splunk_dashboard.png)
+<img width="377" height="101" alt="image" src="https://github.com/user-attachments/assets/b780a650-756b-42c2-ad62-9511a3e5aa6a" />
+
+<img width="1203" height="307" alt="image" src="https://github.com/user-attachments/assets/72e3b93e-979a-47f3-aeb9-d1fbf3a218c6" />
+
+8) Escalada de Privilegios: EventCode 4732 (Adición al grupo Administradores). ![Evidencia 8](img/splunk_4732.png)
+
+9) Persistencia mediante PowerShell: Script de ejecución detectado vía 4688. ![Evidencia 9](img/splunk_ps_exec.png)
+
+10) Dashboard Final: Vista general de alertas críticas en el panel de Splunk. ![Evidencia 10](img/splunk_dashboard.png)
 
 💡 Perfil del Desarrollador
 
