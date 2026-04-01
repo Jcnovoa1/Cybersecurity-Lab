@@ -85,11 +85,15 @@ A continuación se detallan las capturas de pantalla que documentan el ciclo de 
 
 <img width="1203" height="307" alt="image" src="https://github.com/user-attachments/assets/72e3b93e-979a-47f3-aeb9-d1fbf3a218c6" />
 
-8) Escalada de Privilegios: EventCode 4732 (Adición al grupo Administradores). ![Evidencia 8](img/splunk_4732.png)
+8) Escalada de Privilegios: EventCode 4732 (Adición al grupo Administradores).
 
-9) Persistencia mediante PowerShell: Script de ejecución detectado vía 4688. ![Evidencia 9](img/splunk_ps_exec.png)
+<img width="275" height="73" alt="image" src="https://github.com/user-attachments/assets/6955eaa7-456a-4201-b029-2ce1f95cdc18" />
 
-10) Dashboard Final: Vista general de alertas críticas en el panel de Splunk. ![Evidencia 10](img/splunk_dashboard.png)
+<img width="1227" height="264" alt="image" src="https://github.com/user-attachments/assets/3db8d8d9-4e81-49bc-bb45-08b70f7b13fd" />
+
+10) Persistencia mediante PowerShell: Script de ejecución detectado vía 4688. ![Evidencia 9](img/splunk_ps_exec.png)
+
+11) Dashboard Final: Vista general de alertas críticas en el panel de Splunk. ![Evidencia 10](img/splunk_dashboard.png)
 
 💡 Perfil del Desarrollador
 
