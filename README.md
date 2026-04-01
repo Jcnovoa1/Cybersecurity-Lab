@@ -62,9 +62,9 @@ A continuación se detallan las capturas de pantalla que documentan el ciclo de 
 
 4) Fuerza Bruta Exitosa: Una vez desactivado el NLA en el servidor, se vuelve a ejecutar el comando de conexión desde Kali Linux. En esta ocasión, se permite al atacante visualizar la interfaz de inicio de sesión de Windows Server, facilitando intentos de fuerza bruta.
 
-<img width="347" height="142" alt="image" src="https://github.com/user-attachments/assets/0672136a-11f6-4049-8c11-7db25708cf09" />
-
 <img width="478" height="323" alt="image" src="https://github.com/user-attachments/assets/2d6405db-7b60-4c90-92fd-46477d7efd7e" />
+
+<img width="347" height="142" alt="image" src="https://github.com/user-attachments/assets/0672136a-11f6-4049-8c11-7db25708cf09" />
 
 Reconocimiento de Usuario: Ejecución de whoami detectada en el SIEM. ![Evidencia 5](img/splunk_whoami.png)
 
